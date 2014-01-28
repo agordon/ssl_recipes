@@ -56,19 +56,19 @@ Files created in: ./CA/servers/myserver.com :
 
 The following examples are in the `./recipes` directory:
 
-1. Installing Root CA's certificate on clients
+1. **Apache2** Server Configuration
+    1. Typical Server-side SSL (self-signed certificate)
+    2. SSL-Client-Side-Certificate (where server authentications the client)
+2. **Lighttpd** Server Configuration
+    1. Typical Server-side SSL (self-signed certificate)
+    2. SSL-Client-Side-Certificate (where server authentications the client)
+3. Using **cURL** (server-side + client-side)
+4. Using **wget** (server-side + client-side)
+5. Creating secure network tunnel with **stunnel**
+6. Creating secure remote logging with **rsyslogd**
+7. Installing Root CA's certificate on clients (TODO)
     *. Windows, Mac-OS, iPhone/iPad, Firefox, Chrome
-2. **Apache2** Server Configuration
-    1. Typical Server-side SSL (self-signed certificate)
-    2. SSL-Client-Side-Certificate (where server authentications the client)
-3. **Lighttpd** Server Configuration
-    1. Typical Server-side SSL (self-signed certificate)
-    2. SSL-Client-Side-Certificate (where server authentications the client)
-4. Using **cURL** (server-side + client-side)
-5. Using **wget** (server-side + client-side)
-6. Creating secure network tunnel with **stunnel**
-7. Creating secure remote logging with **rsyslogd**
-8. Installing and Using Client-Side-Certificates on clients
+8. Installing and Using Client-Side-Certificates on clients (TODO)
     *. Firefox, iPhone/iPad
 
 
