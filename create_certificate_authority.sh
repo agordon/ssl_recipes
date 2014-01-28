@@ -87,9 +87,9 @@ Example:
     Public Certificate file (for distribution): ./CA/CA/public/ca_public_certificate.pem
 
   # Then create self-signed certificates for as many servers as you'd like:
-  \$ ./create_server_secrtificate.sh myserver.com
-  \$ ./create_server_secrtificate.sh foobar.org
-  \$ ./create_server_secrtificate.sh yahoo.com
+  \$ ./create_certificate.sh myserver.com
+  \$ ./create_certificate.sh foobar.org
+  \$ ./create_certificate.sh yahoo.com
 
 Output files:
 
@@ -140,6 +140,9 @@ do
 	--config)	OPEN_SSL_CONFIG_FILE="$2"
 			[ -z "$OPEN_SSL_CONFIG_FILE" ] && { echo "Error: Config file must not be empty">&2 ; exit 1 ; }
 			shift
+			;;
+	*)		echo "Error: unknown option '$1'. See --help for help">&2
+			exit 1
 			;;
 	esac
 	shift;
