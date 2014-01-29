@@ -47,7 +47,7 @@ Choose wisely:
 * [iPhone/iPad](client_CA_iOS.md)
 * [Firefox on Mac/Windows](client_CA_firefox.md)
 * [Safari/Chrom on Mac OSX](client_CA_macOSX.md)
-* [IE/Chrom on Windows](client_CA_windows.md)
+* [IE/Chrom on Windows](client_CA_windowsXP.md)
 * [IE/Chrom on Windows 7](client_CA_windows7.md)
 
 
