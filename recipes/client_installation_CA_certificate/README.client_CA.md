@@ -62,7 +62,7 @@ when they access an HTTPS server signed by the CA. Warning appear as such:
 
 **Safari Mac OS X Warnings:**
 
-![Safari Mac OS X Warning](mages/safari_certyificate_warning.png)
+![Safari Mac OS X Warning](images/safari_certyificate_warning.png)
 
 **Chrom Warnings:**
 
