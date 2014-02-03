@@ -1,13 +1,13 @@
 # rsyslogd - Reliable, Encrypted, Remote logging
 
-[rsyslogd](http://www.rsyslog.com/) is an enhanced syslogd server for linux, supporting remote logging, with secure connection and reliable message delivery.
+[rsyslog](http://www.rsyslog.com/) is an enhanced syslogd server for linux, supporting remote logging, with secure connection and reliable message delivery.
 
 [libRELP](http://www.librelp.com/) is a reliable logging library, designed to
 address some reliability issues with traditional syslog mechanisms.
 
-More info: [rsyslogd SSL manual](http://www.rsyslog.com/doc/rsyslog_secure_tls.html)
+More info: [rsyslog SSL manual](http://www.rsyslog.com/doc/rsyslog_secure_tls.html)
 
-More more info: [rsyslogd + RELP + TLS](http://www.rsyslog.com/using-tls-with-relp/)
+More more info: [rsyslog + RELP + TLS](http://www.rsyslog.com/using-tls-with-relp/)
 
 ### Flow diagram
 
@@ -43,7 +43,7 @@ More more info: [rsyslogd + RELP + TLS](http://www.rsyslog.com/using-tls-with-re
 
 ### Pre-requisites:
 
-1. rsyslogd 7.5.8 (or later)
+1. rsyslog 7.5.8 (or later)
 2. libRelp + tls support
 
 ### Required Certificates:
@@ -92,7 +92,7 @@ Note the following configuration options:
 
 1. **imrelp** is the Input Module for libRELP.
 2. The server rsyslog is configured to listen on TCP port 20514.
-3. TLS is turned on, and the three required files are provided (NOTE: rsyslogd
+3. TLS is turned on, and the three required files are provided (NOTE: rsyslog
     requires full path to all files. Adapt your configuration for based on the
     locations of theses files on your computer).
 4. **permitted peers** option will require the sending client's names to match.
@@ -105,9 +105,9 @@ Note the following configuration options:
 $ /usr/local/sbin/rsyslogd -n -f $PWD/server.conf -i /tmp/server.pid
 ```
 
-1. At the time of this writing, most linux distributions use an older version of rsyslogd.
+1. At the time of this writing, most linux distributions use an older version of rsyslog.
     To use these options (libRELP+TLS) you'll likely need to recompile rsyslog from source code,
-    or download the packages from the rsyslogd website.
+    or download the packages from the rsyslog website.
 2. Using `-n` will prevent rsyslogd from forking into the background - Use this for debugging
     and testing purposes, as error messages will appear on the screen.
 3. Using a custom configuration file (`-f`) requires a full path (which is why `$PWD` is needed).
@@ -146,10 +146,10 @@ Note the following configuration options:
     from a unix socket. With `SysSock.use="off"`, this process will not interfere
     with the system's default logging socket (for testing purposes).
 2. **omrelp** is the Output Module for libRELP.
-3. The client rsyslog is configured to send messages to an rsyslogd server on
-    IP **127.0.0.1** (which is the local machine). If you run the server rsyslogd
-    and the client rsyslogd on different machines, use the server's IP address here.
-4. TLS is turned on, and the three required files are provided (NOTE: rsyslogd
+3. The client rsyslog is configured to send messages to an rsyslog server on
+    IP **127.0.0.1** (which is the local machine). If you run the server rsyslog
+    and the client rsyslog on different machines, use the server's IP address here.
+4. TLS is turned on, and the three required files are provided (NOTE: rsyslog
     requires full path to all files. Adapt your configuration for based on the
     locations of theses files on your computer).
 5. **permitted peers** option will require the sending server's name to match.
@@ -163,9 +163,9 @@ Note the following configuration options:
  $ /usr/local/sbin/rsyslogd -n -f $PWD/client.conf -i /tmp/client.pid
 ```
 
-1. At the time of this writing, most linux distributions use an older version of rsyslogd.
+1. At the time of this writing, most linux distributions use an older version of rsyslog.
     To use these options (libRELP+TLS) you'll likely need to recompile rsyslog from source code,
-    or download the packages from the rsyslogd website.
+    or download the packages from the rsyslog website.
 2. Using `-n` will prevent rsyslogd from forking into the background - Use this for debugging
     and testing purposes, as error messages will appear on the screen.
 3. Using a custom configuration file (`-f`) requires a full path (which is why `$PWD` is needed).
