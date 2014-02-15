@@ -12,9 +12,11 @@ P12_PASSWORD="123456"
 
 DAYS=3650
 
-OPEN_SSL_CONFIG_FILE=./openssl.cnf
 
-CA_DIR="./CA"
+# Default location of the openssl.cnf file.
+OPEN_SSL_CONFIG_FILE=$(dirname "$0")/openssl.cnf
+
+CA_DIR=$(dirname "$0")/CA
 
 # Silly Values for Server's certificate.
 DEFAULT_COUNTRY_NAME="US"

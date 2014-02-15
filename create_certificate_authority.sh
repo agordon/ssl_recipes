@@ -15,10 +15,10 @@ PASSWORD="12345"
 DAYS=3650
 
 # Default directory for this new CA
-CA_DIR="./CA"
+CA_DIR=$(dirname "$0")/CA
 
 # Default location of the openssl.cnf file.
-OPEN_SSL_CONFIG_FILE=./openssl.cnf
+OPEN_SSL_CONFIG_FILE=$(dirname "$0")/openssl.cnf
 
 # If 'yes', user will be asked for details (name,organization,country,state,email,etc)
 # If 'no', default (silly) values will be used.
